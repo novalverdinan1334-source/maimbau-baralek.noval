@@ -3,174 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Pernikahan - Maimbau Baralek</title>
+    <title>The Wedding of Maimbau Baralek</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel+Decorative:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="cs.css">
 </head>
 <body>
 
-    <audio id="bg-music" loop>
-        <source src="https://assets.mixkit.co/music/preview/mixkit-wedding-bells-slow-297.mp3" type="audio/mp3">
-    </audio>
+    <img src="garis atas.png" alt="border top" class="fixed-border-top">
     
+    <div class="fixed-border-bottom-container">
+        <img src="garis pada cover.png" alt="border bottom" class="fixed-border-bottom">
+    </div>
+    
+    <audio id="bg-music" loop>
+        <source src="musik.mp3" type="audio/mp3">
+    </audio>
     <div class="music-control" onclick="toggleMusic()">
         <i class="fas fa-music" id="music-icon"></i>
     </div>
 
-    <div class="minang-border-top"></div>
 
-    <div id="cover">
-        <h3 class="font-secondary">The Wedding of</h3>
-        <h1 class="font-primary title-large">Maimbau Baralek</h1>
-        
-        <div class="rumah-gadang"><i class="fas fa-home"></i></div> 
-        
-        <p class="gold-text mb-20">18 Januari 2026</p>
-        <p>Kepada Yth.<br>Bapak/Ibu/Saudara/i</p>
-        <h2 class="font-secondary guest-name">Tamu Undangan</h2>
-        <button class="btn-open" onclick="openInvitation()">
-            <i class="fas fa-envelope-open"></i> Buka Undangan
-        </button>
-    </div>
-
-    <div class="container">
-        
-        <section id="home">
-            <div class="blob blob-top-left"></div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Bismillah.svg/1200px-Bismillah.svg.png" width="150" alt="Bismillah" class="bismillah">
+    <section id="cover">
+        <div class="cover-content">
+            <h3 class="text-script gold" style="font-size: 3.5rem;">Maimbau Baralek</h3>
             
-            <p class="verse">
-                "Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya..."
-                <br><b>(QS. Ar-Rum: 21)</b>
+            <div class="cover-names gold font-serif">
+                <div>Pratiwi & Fadli</div>
+                <div>Rahmi & Ade</div>
+                <div>Diya & Oky</div>
+            </div>
+
+            <img src="rumah gadang.png" alt="Rumah Gadang" class="rumah-gadang-icon fade-pulse">
+            
+            <p class="gold font-serif bold" style="font-size: 1.3rem; margin: 20px 0;">18 . 01 . 2026</p>
+            
+            <div class="guest-box">
+                <p>Kepada Yth.<br>Bapak/Ibu/Saudara/i</p>
+                <h2 class="guest-name">Tamu Undangan</h2>
+            </div>
+
+            <button class="btn-open" onclick="openInvitation()">Buka Undangan</button>
+        </div>
+    </section>
+
+
+    <div class="main-container">
+        
+        <section class="section-pad text-center fade-in">
+            <p class="font-serif gold bold" style="margin-bottom: 15px;">Maha Suci Allah SWT yang telah menciptakan makhluk-Nya...</p>
+            <p class="font-nunito">
+                berpasang-pasangan. Ya Allah perkenankanlah kami menikahkan putra-putri kami:
             </p>
-            <br>
-            <p>Maha Suci Allah SWT yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah perkenankanlah kami menikahkan putra-putri kami:</p>
         </section>
 
-        <section id="couple">
-            <h1 class="font-primary section-title">Mempelai</h1>
-
-            <div class="couple-block fade-in">
-                <div class="couple-photo" style="background-image: url('https://via.placeholder.com/300x300/ffdde1/d4af37?text=Pratiwi+Fadli');"></div>
-                <h2 class="font-primary groom-name">Pratiwi Ervia Nora, A.Md. Kom.</h2>
+        <section id="mempelai" class="section-pad text-center bg-gradient">
+            
+            <div class="couple-card fade-in">
+                <i class="fas fa-heart gold" style="font-size: 24px; margin-bottom:10px;"></i>
+                <h2 class="text-script gold couple-name">Pratiwi Ervia Nora, A.Md. Kom.</h2>
                 <p class="parents">Putri Bpk. Basri & Ibu Yulina Wati</p>
-                <div class="dan-sign">&</div>
-                <h2 class="font-primary groom-name">Fadli Zulkarnain, S.Kom.</h2>
+                
+                <div class="text-script gold" style="font-size: 1.8rem; margin: 10px 0;">&</div>
+                
+                <h2 class="text-script gold couple-name">Fadli Zulkarnain, S.Kom.</h2>
                 <p class="parents">Putra Bpk. Zulkifli & Ibu Farida Wati</p>
             </div>
 
-            <div class="couple-block fade-in">
-                <div class="couple-photo" style="background-image: url('https://via.placeholder.com/300x300/ffdde1/d4af37?text=Rahmi+Ade');"></div>
-                <h2 class="font-primary groom-name">Rahmi Aulia, S.Pd.</h2>
+             <div class="ornament-divider gold"><i class="fas fa-asterisk"></i></div>
+
+             <div class="couple-card fade-in">
+                <h2 class="text-script gold couple-name">Rahmi Aulia, S.Pd.</h2>
                 <p class="parents">Putri Bpk. Aulia & Ibu Ratna Roza</p>
-                <div class="dan-sign">&</div>
-                <h2 class="font-primary groom-name">Ade Zulfar Pratama</h2>
+                
+                <div class="text-script gold" style="font-size: 1.8rem; margin: 10px 0;">&</div>
+                
+                <h2 class="text-script gold couple-name">Ade Zulfar Pratama</h2>
                 <p class="parents">Putra Bpk. Zulkifli & Ibu Farida Wati</p>
             </div>
 
-            <div class="couple-block fade-in no-border">
-                <div class="couple-photo" style="background-image: url('https://via.placeholder.com/300x300/ffdde1/d4af37?text=Hidayyatul+Oky');"></div>
-                <h2 class="font-primary groom-name">Hidayyatul Islami, S.Pd., Gr.</h2>
-                <p class="parents">Putri Bpk. Surya Darma & Ibu Nina Yetni Suryanti (Almh)</p>
-                <div class="dan-sign">&</div>
-                <h2 class="font-primary groom-name">Oky Fernando Putra, S.Si.</h2>
+             <div class="ornament-divider gold"><i class="fas fa-asterisk"></i></div>
+
+             <div class="couple-card fade-in">
+                <h2 class="text-script gold couple-name">Hidayyatul Islami, S.Pd., Gr.</h2>
+                <p class="parents">Putri Bpk. Surya Darma & Ibu Nina Yetni (Almh)</p>
+                
+                <div class="text-script gold" style="font-size: 1.8rem; margin: 10px 0;">&</div>
+                
+                <h2 class="text-script gold couple-name">Oky Fernando Putra, S.Si.</h2>
                 <p class="parents">Putra Bpk. Afrizal (Alm) & Ibu Desnawati</p>
             </div>
         </section>
 
-        <section id="event" class="bg-alt">
-            <div class="blob blob-right"></div>
-            <h1 class="font-primary section-title">Rangkaian Acara</h1>
-            <p>Insya Allah acara akan dilaksanakan pada:</p>
-
-            <div class="event-card fade-in">
-                <div class="rumah-gadang-small"><i class="fas fa-heart"></i></div>
-                <h2 class="gold-text">Resepsi Pernikahan</h2>
-                <hr class="divider">
+        <section id="acara" class="section-pad text-center">
+             <img src="rumah gadang.png" style="width: 60px; margin-bottom: 10px;">
+             
+             <div class="gold-box fade-in">
+                <h2 class="font-serif gold bold">Resepsi Pernikahan</h2>
+                <hr class="gold-line">
+                <p class="font-serif" style="font-size: 1.5rem;">Minggu, 18 Januari 2026</p>
+                <p class="font-nunito bold">Pukul: 10.00 WIB - Selesai</p>
                 
-                <p class="event-date">Minggu, 18 Januari 2026</p>
-                <p><i class="far fa-clock"></i> Pukul 10.00 WIB - Selesai</p>
-                
-                <div class="countdown">
-                    <div class="time-box"><span id="days">00</span><small>Hari</small></div>
-                    <div class="time-box"><span id="hours">00</span><small>Jam</small></div>
-                    <div class="time-box"><span id="minutes">00</span><small>Menit</small></div>
-                    <div class="time-box"><span id="seconds">00</span><small>Detik</small></div>
+                <div class="countdown-wrapper">
+                    <div class="timer-box"><span id="days">00</span><small>Hari</small></div>
+                    <div class="timer-box"><span id="hours">00</span><small>Jam</small></div>
+                    <div class="timer-box"><span id="minutes">00</span><small>Menit</small></div>
+                    <div class="timer-box"><span id="seconds">00</span><small>Detik</small></div>
                 </div>
 
-                <p class="mt-20"><b>Lokasi:</b><br>
-                Perumahan Sawah Laweh, Jorong III Sangkir,<br>Nagari Lubuk Basung, Kec. Lubuk Basung,<br>Kab. Agam.</p>
-                
-                <a href="https://goo.gl/maps/placeholder" target="_blank" class="btn-map">
-                    <i class="fas fa-map-marker-alt"></i> Lihat Google Maps
-                </a>
-            </div>
+                <p class="font-nunito" style="margin-top: 20px;">
+                    <b>Lokasi:</b><br>Perumahan Sawah Laweh, Jorong III Sangkir, Lubuk Basung, Agam.
+                </p>
+             </div>
         </section>
 
-        <section id="rsvp">
-            <h1 class="font-primary section-title">Konfirmasi Kehadiran</h1>
-            <p>Mohon konfirmasi kehadiran Bapak/Ibu/Saudara/i:</p>
-            
-            <div class="event-card fade-in text-left">
-                <form id="rsvpForm" onsubmit="alert('Terima kasih! Konfirmasi Anda telah terkirim.'); return false;">
-                    <label>Nama Lengkap</label>
-                    <input type="text" placeholder="Masukkan Nama Anda" required>
-                    
-                    <label>Jumlah Tamu</label>
-                    <select>
-                        <option>1 Orang</option>
-                        <option>2 Orang</option>
-                    </select>
+        <section id="lokasi" class="section-pad text-center bg-gradient">
+            <h2 class="text-script gold" style="font-size: 3rem;">Denah Lokasi</h2>
+            <div class="fade-in" style="margin: 30px auto; width: 100%;">
+                <img src="denah.jpg" alt="Denah Lokasi" style="width: 100%; border-radius: 8px; border: 2px solid var(--gold); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            </div>
+            <a href="https://goo.gl/maps/placeholder" target="_blank" class="btn-gold fade-in">
+                <i class="fas fa-map-marked-alt"></i> Buka Google Maps
+            </a>
+        </section>
 
-                    <label>Status Kehadiran</label>
-                    <select>
-                        <option>Hadir</option>
-                        <option>Maaf, Tidak Bisa Hadir</option>
-                    </select>
+        <section id="rsvp" class="section-pad text-center">
+            <h2 class="font-serif gold bold">Konfirmasi Kehadiran</h2>
+            <p class="font-nunito mb-20">Mohon doa restu dan konfirmasi kehadiran.</p>
 
-                    <label>Ucapan & Doa</label>
-                    <textarea rows="3" placeholder="Berikan ucapan selamat..."></textarea>
-
-                    <button type="submit" class="submit">Kirim Konfirmasi</button>
+            <div class="gold-box text-left fade-in">
+                <form id="rsvp-form">
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" class="form-input" placeholder="Nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Konfirmasi</label>
+                        <select class="form-input">
+                            <option value="Hadir">Akan Hadir</option>
+                            <option value="Tidak">Berhalangan</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ucapan</label>
+                        <textarea class="form-input" rows="3" placeholder="Berikan ucapan..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-gold" style="width: 100%;">Kirim</button>
                 </form>
             </div>
         </section>
 
-        <section id="gift" class="bg-alt">
-             <h1 class="font-primary section-title">Tanda Kasih</h1>
-             <p>Bagi tamu yang ingin memberikan tanda kasih, dapat melalui:</p>
-             <div class="event-card fade-in">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/1200px-Bank_Central_Asia.svg.png" width="100" alt="BCA">
-                 <p class="rek-number">1234 5678 90</p>
-                 <p>a.n Pratiwi Ervia Nora</p>
-                 <button class="btn-copy" onclick="navigator.clipboard.writeText('1234567890'); alert('No Rekening Disalin!');">
-                    <i class="far fa-copy"></i> Salin No. Rek
-                 </button>
-             </div>
-        </section>
-
-        <section class="footer">
-            <p>Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i kami ucapkan terima kasih.</p>
-            <br>
-            <h2 class="gold-text">Wassalamu'alaikum Wr. Wb.</h2>
-            <br>
-            <p class="small-note">Turut Mengundang:<br>Ninik Mamak, Urang Sumando, Sanak Family Kedua Mempelai</p>
+        <section class="section-pad text-center" style="padding-bottom: 100px;">
+            <p class="font-nunito bold">Terima Kasih</p>
+            <h2 class="text-script gold" style="margin: 20px 0;">Wassalamu'alaikum Wr. Wb.</h2>
+            <p class="font-nunito small">Turut Mengundang:<br>Ninik Mamak, Urang Sumando,<br>Sanak Family Kedua Mempelai</p>
         </section>
 
     </div>
 
-    <nav class="navbar">
-        <a href="#home" class="nav-item"><i class="fas fa-home"></i>Home</a>
-        <a href="#couple" class="nav-item"><i class="fas fa-heart"></i>Mempelai</a>
-        <a href="#event" class="nav-item"><i class="fas fa-calendar-alt"></i>Acara</a>
-        <a href="#rsvp" class="nav-item"><i class="fas fa-envelope"></i>Ucapan</a>
+    <nav class="bottom-navbar">
+        <a href="#cover" class="nav-item active"><i class="fas fa-home"></i></a>
+        <a href="#mempelai" class="nav-item"><i class="fas fa-user-friends"></i></a>
+        <a href="#acara" class="nav-item"><i class="fas fa-calendar-day"></i></a>
+        <a href="#lokasi" class="nav-item"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="#rsvp" class="nav-item"><i class="fas fa-comment-dots"></i></a>
     </nav>
-
-    <div class="minang-border-bottom"></div>
 
     <script src="jv.js"></script>
 </body>
