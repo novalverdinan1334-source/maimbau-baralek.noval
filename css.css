@@ -1,0 +1,253 @@
+/* --- VARIABLE & RESET --- */
+:root {
+    --primary-color: #d4af37; /* Warna Emas */
+    --bg-pink: #fff0f5;       /* Pink Pastel Lembut */
+    --text-color: #4a4a4a;
+    --accent-pink: #ffb7c5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-pink);
+    color: var(--text-color);
+    overflow-x: hidden; /* Mencegah scroll samping */
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Texture halus */
+}
+
+/* --- UTILITIES --- */
+.font-primary { font-family: 'Great Vibes', cursive; }
+.font-secondary { font-family: 'Playfair Display', serif; }
+.gold-text { color: var(--primary-color); font-family: 'Playfair Display', serif; }
+.mb-20 { margin-bottom: 20px; }
+.mt-20 { margin-top: 20px; }
+.bg-alt { background-color: #fffafb; }
+
+/* --- ORNAMEN MINANG (CSS PURE) --- */
+.minang-border-top, .minang-border-bottom {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--primary-color),
+        var(--primary-color) 10px,
+        #fff 10px,
+        #fff 20px
+    );
+    z-index: 99;
+    opacity: 0.8;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.minang-border-top { top: 0; }
+.minang-border-bottom { bottom: 0; z-index: 101; height: 10px;}
+
+/* --- COVER (BUKA UNDANGAN) --- */
+#cover {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Ganti URL gambar background cover di sini */
+    background: linear-gradient(rgba(255,240,245,0.9), rgba(255,240,245,0.9)), url('https://images.unsplash.com/photo-1519225421980-715cb0202128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.8s ease-in-out;
+}
+
+#cover.open { transform: translateY(-100%); }
+
+.title-large { font-size: 3rem; margin: 20px 0; color: #d63384; }
+.guest-name { font-size: 1.5rem; margin: 10px 0; color: #d63384; }
+
+.btn-open {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* --- MUSIC CONTROL --- */
+.music-control {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+}
+
+/* --- CONTAINER UTAMA --- */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    padding-bottom: 80px; /* Space for navbar */
+    overflow: hidden;
+    position: relative;
+}
+
+/* --- DEKORASI --- */
+.blob {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #ffdde1 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+.blob-top-left { top: -50px; left: -50px; }
+.blob-right { right: -50px; top: 100px; }
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.bismillah { margin-bottom: 20px; filter: invert(32%) sepia(8%) saturate(1478%) hue-rotate(279deg) brightness(91%) contrast(85%); }
+.verse { font-size: 14px; line-height: 1.6; }
+
+/* --- BAGIAN MEMPELAI --- */
+.section-title { margin-bottom: 30px; color: #d63384; font-size: 2.5rem; }
+
+.couple-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    margin: 20px auto;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+}
+
+.couple-block {
+    margin-bottom: 40px;
+    border-bottom: 1px dashed var(--primary-color);
+    padding-bottom: 20px;
+}
+.couple-block.no-border { border-bottom: none; }
+
+.groom-name { font-size: 1.8rem; color: #d63384; margin-bottom: 5px; }
+.dan-sign { font-family: 'Great Vibes'; font-size: 24px; color: var(--primary-color); margin: 10px 0; }
+
+/* --- RUMAH GADANG ICON --- */
+.rumah-gadang { font-size: 40px; color: var(--primary-color); margin: 20px 0; }
+.rumah-gadang-small { font-size: 30px; color: var(--primary-color); margin-bottom: 10px; }
+
+/* --- COUNTDOWN --- */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.time-box {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 60px;
+}
+.time-box span { display: block; font-size: 20px; font-weight: bold; }
+.time-box small { font-size: 10px; }
+
+/* --- EVENT DETAILS --- */
+.event-card {
+    background: #fff;
+    border: 1px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+.event-card::before {
+    content: '';
+    position: absolute;
+    top: 5px; left: 5px; right: 5px; bottom: 5px;
+    border: 1px dashed var(--primary-color);
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.divider { width: 50%; margin: 15px auto; border-color: #eee; }
+.event-date { font-weight: bold; font-size: 18px; }
+
+.btn-map {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--text-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* --- FORM & GIFT --- */
+.text-left { text-align: left; }
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+button.submit {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.rek-number { margin: 10px 0; font-weight: bold; font-size: 1.2rem;}
+.btn-copy { font-size: 12px; padding: 5px 10px; cursor: pointer; border: 1px solid #ddd; background: #fff; border-radius: 4px;}
+
+/* --- FOOTER --- */
+.small-note { font-size: 12px; color: #aaa; }
+
+/* --- NAVBAR BAWAH --- */
+.navbar {
+    position: fixed;
+    bottom: 0; left: 0; width: 100%;
+    background: white;
+    display: flex;
+    justify-content:
